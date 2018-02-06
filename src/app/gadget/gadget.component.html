@@ -1,0 +1,13 @@
+
+<div class="card" style="width: 20rem;">
+    <div class="card-header">{{gadget.name}}
+    </div>
+   <div class="card-block">
+       <img class="card-img-top" src="{{gadget.fullImagePath}}" alt="{{gadget.name}}">
+
+    </div>
+    <app-tabs [gadget]="gadget"></app-tabs>
+    <div>
+    <button *ngIf="gadget.inventory > 0" class="btn btn-primary" (click) = "gadget.inventory = gadget.inventory - 1">Add to Cart</button>
+    <button *ngIf="gadget.inventory <= 0" class="btn btn-danger" disabled>Sold Out</button>
+    </div>
