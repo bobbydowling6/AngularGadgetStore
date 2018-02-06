@@ -13,8 +13,8 @@ export class AppComponent {
     cart: cartmodel = {
         totalprice: 0,
         totalquantity: 0,
-        items: 0
-    }
+        items: []
+    };
 
     gadgets: GadgetModel[] = [{
         id: 1,

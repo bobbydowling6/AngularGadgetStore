@@ -15,9 +15,6 @@ links = [{
 }, {
     text: 'Account',
     href: './Account'
-}, {
-    text: 'Cart',
-    href: './Cart'
 }];
   constructor() { }
 
