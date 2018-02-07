@@ -1,6 +1,6 @@
 import {cartitemmodel} from './cartitemmodel';
 
-export class carmodel {
+export class cartmodel {
     items: cartitemmodel[];
     totalquantity: number;
     totalprice: number;

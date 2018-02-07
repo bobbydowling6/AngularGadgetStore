@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { GadgetModel } from '../../gadgetmodel';
 
 @Component({
   selector: 'app-reviews',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewsComponent implements OnInit {
 
+    @Input() gadget: GadgetModel;
   constructor() { }
 
   ngOnInit() {
