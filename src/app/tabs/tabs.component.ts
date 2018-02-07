@@ -11,7 +11,7 @@ export class TabsComponent implements OnInit {
     @Input() gadget: GadgetModel;
     tab: number;
 
-     setTab(selectedTab: number){
+     setTab(selectedTab: number) {
         this.tab = selectedTab;
     }
 

@@ -20,10 +20,10 @@ export class AppComponent {
         id: 1,
         name: 'BiSki',
         price: 500,
-        description: 'Half bike, half jetski',
+        description: 'The Biski is truly unique; as a single seat (or single plus pillion), twin jet, HSA Motorcycle, it is a world’s first in many ways. At just 2.3m long and under 1m wide, it is the smallest of all Gibbs High speed amphibious platforms, and very probably the most technically advanced. It represents true freedom for the individual; serious fun.',
         fullImagePath: './assets/gibbs-biski-motorcycle.jpg',
          inventory: 10,
-         colors: ["red", "blue", "orange"],
+         colors: ['red', 'blue', 'orange'],
     }, {
         id: 2,
         name: 'Google Glass',
@@ -31,7 +31,7 @@ export class AppComponent {
         description: 'Google Glass is an optical head-mounted display designed in the shape of a pair of eyeglasses. It was developed by X with the mission of producing a ubiquitous computer. Google Glass displayed information in a smartphone-like hands-free format.',
         fullImagePath: './assets/google-glass-shades.jpg',
         inventory: 5,
-        colors: ["green", "yellow"],
+        colors: ['green', 'yellow'],
     },
      {
         id: 3,
@@ -40,7 +40,7 @@ export class AppComponent {
         description: 'The Third Thumb Attachment gives you a new functional thumb to use in a variety of ways. The movement of the thumb is ensured by two motors hiding inside of it. But the real culprits that run the show are your toes. Your toes can put pressure onto two sensors that hide in your shoes. The sensors, in return, send the signal back to the thumb via Bluetooth and “tell” it what it’s supposed to do.',
         fullImagePath: './assets/third-thumb-attachment.jpg',
         inventory: 0,
-        colors: ["N/A"]
+        colors: ['N/A']
      },
     {
         id: 4,
@@ -49,7 +49,7 @@ export class AppComponent {
         description: 'A robot that massages your back for you!',
         fullImagePath: './assets/massaging-robot.jpg',
         inventory: 5,
-        colors: ["red", "blue"]
+        colors: ['red', 'blue']
     },
      {
         id: 5,
@@ -58,7 +58,7 @@ export class AppComponent {
         description: 'This little gadget will translate the words you speak in as little as 0.2 seconds and say them right back at you in another language. More specifically, it translates English into Japanese, Chinese, and Spanish.',
         fullImagePath: './assets/portable-language-translator.jpg',
         inventory: 3,
-        colors: ["purple"]
+        colors: ['purple']
      },
     {
         id: 6,
@@ -67,6 +67,6 @@ export class AppComponent {
         description: 'You might have thought that getting yourself a dual or triple monitor for a desktop or laptop would keep you tied to one place. That’s not the case anymore. The use of this portable monitor is easy. As in “click, connect, enjoy” easy. Not only can you attach it to your display like a magnet, the additional slide-out monitors can be rotated to allow you a 360º sharing experience.',
         fullImagePath: './assets/slidenjoy-triple-monitor.jpg',
         inventory: 3,
-        colors: ["black", "white"]
-    }]
+        colors: ['black', 'white']
+    }];
 }
