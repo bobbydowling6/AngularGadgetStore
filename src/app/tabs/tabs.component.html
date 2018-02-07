@@ -11,16 +11,16 @@
     <a class="nav-link" href="#" (click)="setTab(3)" [class.active]="tab === 3">Reviews</a>
   </li>
 </ul>
-<div *ngIf="tab=== 1">
+<div *ngIf="tab === 1">
     <p>{{gadget.description}}</p>
     <p>{{gadget.price | currency}}</p>
 </div>
-<div *ngIf="tab=== 2">
+<div *ngIf="tab === 2">
        <h6>Colors available</h6>
        <ul>
         <li *ngFor="let color of gadget.colors">{{color}}</li>
        </ul></div>
-<div *ngIf="tab=== 3">
-    Coming Soon!
-</div>
+<div *ngIf="tab === 3">
+    <app-reviews [gadget] = "gadget"></app-reviews>
+    </div>
 </html>

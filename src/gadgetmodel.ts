@@ -1,3 +1,5 @@
+import { ReviewModel } from './reviewmodel';
+
 export class GadgetModel {
     id: number;
     name: string;
@@ -6,4 +8,5 @@ export class GadgetModel {
     fullImagePath: string;
     inventory: number;
     colors: string[];
+    reviews: ReviewModel[];
 }

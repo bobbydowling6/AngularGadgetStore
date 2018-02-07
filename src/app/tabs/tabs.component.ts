@@ -8,6 +8,7 @@ import { GadgetModel } from '../../gadgetmodel';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
+
     @Input() gadget: GadgetModel;
     tab: number;
 
@@ -19,5 +20,5 @@ export class TabsComponent implements OnInit {
 
   ngOnInit() {
     this.tab = 1;
-}
+  }
 }

@@ -17,11 +17,24 @@
             </ul>
         </div>
     </nav>
-    <table style="display: none" class="cartBody">
+    <div style="display: none" class="cartBody">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
         <tr *ngFor="let i of cart.items">
             <td>{{i.name}}</td>
             <td>{{i.quantity}}</td>
-            <td>{{i.unitprice}}</td>
+            <td>{{i.unitprice | currency}}</td>
+            <td>{{i.unitprice * i.quantity | currency}}</td>
         </tr>
+            </tbody>
     </table>
+    </div>
 </html>
