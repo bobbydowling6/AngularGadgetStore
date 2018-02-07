@@ -1,4 +1,4 @@
-export class cartitemmodel {
+export class CartItemModel {
     gadgetid: number;
     name: string;
     unitprice: number;
