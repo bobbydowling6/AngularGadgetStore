@@ -8,6 +8,7 @@ import { GadgetComponent } from './gadget/gadget.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { AvatarService } from './avatar.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AvatarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

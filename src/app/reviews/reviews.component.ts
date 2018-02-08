@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GadgetModel } from '../../gadgetmodel';
 import { ReviewModel } from '../../reviewmodel';
+import { AvatarService } from '../avatar.service';
 
 @Component({
   selector: 'app-reviews',
@@ -12,7 +13,7 @@ export class ReviewsComponent implements OnInit {
     @Input() gadget: GadgetModel;
     newReview: ReviewModel;
 
-    constructor() { }
+    constructor(private avatarService: AvatarService) { }
 
     submitClicked() {
         this.gadget.reviews.push(this.newReview);

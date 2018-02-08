@@ -2,7 +2,10 @@
 <html lang="en-us">
 <div *ngFor="let review of gadget.reviews">
     <div class="row">
-        <div class="col-10">
+        <div class="col-3">
+        <img class="img-fluid" src="{{avatarService.generate(review.author)}}">
+    </div>
+        <div class="col-7">
             <blockquote class="blockquote">
                 <p class="mb-0">{{review.body}}</p>
                 <footer class="blockquote-footer"><cite>{{review.author}}</cite>
@@ -15,49 +18,56 @@
     </div>
 </div>
 <h5>Write a Review</h5>
-    <div class="row">
-        <div class="col-10">
-            <blockquote class="blockquote">
-                <p class="mb-0">{{newReview.body}}</p>
-                <footer class="blockquote-footer"><cite>{{newReview.author}}</cite>
-                </footer>
-            </blockquote>
-        </div>
-        <div class="col-2">
-            <h1>{{newReview.rating}}</h1>
-        </div>
+<div class="row">
+    <div class="col-10">
+        <blockquote class="blockquote">
+            <p class="mb-0">{{newReview.body}}</p>
+            <footer class="blockquote-footer"><cite>{{newReview.author}}</cite>
+            </footer>
+        </blockquote>
     </div>
+    <div class="col-2">
+        <h1>{{newReview.rating}}</h1>
+    </div>
+</div>
 
 <form (ngSubmit)="submitClicked(); reviewForm.reset();" #reviewForm="ngForm">
     <div class="alert alert-danger" *ngIf="reviewForm.touched && reviewForm.invalid">
         Error
         <ul>
-            <li *ngIf="email.errors.required">
+            <li *ngIf="email.touched && email.invalid && email.errors.required">
                 Email is required.
+            </li>
+            <li *ngIf="email.touched && email.invalid && email.errors.pattern">
+                Email is formatted incorrectly
+            </li>
+            <li *ngIf="review.touched && review.invalid && review.errors.required">
+                Review is required.
             </li>
         </ul>
     </div>
     <div class="form-group has-error">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" name="email" placeholder="name@example.com" [(ngModel)]="newReview.author" required [class.is-invalid]="email.invalid && email.touched" #email="ngModel" />
-  </div>
-  <div class="form-group">
-    <label for="rating">Rating</label>
-    <select class="form-control" name="rating" [(ngModel)]="newReview.rating" required>
-      <option value="0">0</option>
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="name@example.com" [(ngModel)]="newReview.author" required [class.is-invalid]="email.invalid && email.touched" #email="ngModel" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" />
+    </div>
+    <div class="form-group">
+        <label for="rating">Rating</label>
+        <select class="form-control" name="rating" [(ngModel)]="newReview.rating" required>
+      <option value="">0</option>
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
       <option value="5">5</option>
     </select>
-  </div>
+    </div>
 
-  <div class="form-group">
-    <label for="body">Review</label>
-    <textarea class="form-control" name="body" rows="3" [(ngModel)]="newReview.body" required></textarea>
-  </div>
+    <div class="form-group">
+        <label for="body">Review</label>
+        <textarea class="form-control" name="body" rows="3" [(ngModel)]="newReview.body" required maxlength="400" [class.is-invalid]="review.invalid && review.touched" #review="ngModel"></textarea>
+    </div>
     <input type="submit" class="btn btn-primary" value="Submit Review" [disabled]="reviewForm.invalid" />
 </form>
 <br>
+
 </html>
